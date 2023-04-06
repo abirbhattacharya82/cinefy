@@ -6,7 +6,9 @@
     background-color: transparent;
 }
 
-#registerForm, #loader1, #loader2 {
+#registerForm,
+#loader1,
+#loader2 {
     display: none;
 }
 
@@ -19,12 +21,13 @@
 }
 
 .RegisterArea {
-    width: 90%;
+    width: 70%;
 }
 
 .ButtonArea {
     display: flex;
     justify-content: center;
+    padding-top: 5%;
 }
 
 .RegisterArea .ButtonArea button {
@@ -43,8 +46,8 @@
 .Form {
     background-color: rgba(255, 255, 255, 0.3);
     color: white;
-    padding-top: 1%;
-    padding-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 10%;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -75,65 +78,67 @@
     font-size: 140%;
     color: white;
 }
-.Loader{
+
+.Loader {
     display: flex;
     justify-content: center;
     padding-top: 10%;
     padding-bottom: 10%;
 }
+
 .spinner {
     width: 44px;
     height: 44px;
     animation: spinner-y0fdc1 2s infinite ease;
     transform-style: preserve-3d;
-   }
-   
-   .spinner > div {
-    background-color: rgba(255,0,0,0.5);
+}
+
+.spinner>div {
+    background-color: rgba(255, 0, 0, 0.5);
     height: 100%;
     position: absolute;
     width: 100%;
     border: 2px solid white;
-   }
-   
-   .spinner div:nth-of-type(1) {
+}
+
+.spinner div:nth-of-type(1) {
     transform: translateZ(-22px) rotateY(180deg);
-   }
-   
-   .spinner div:nth-of-type(2) {
+}
+
+.spinner div:nth-of-type(2) {
     transform: rotateY(-270deg) translateX(50%);
     transform-origin: top right;
-   }
-   
-   .spinner div:nth-of-type(3) {
+}
+
+.spinner div:nth-of-type(3) {
     transform: rotateY(270deg) translateX(-50%);
     transform-origin: center left;
-   }
-   
-   .spinner div:nth-of-type(4) {
+}
+
+.spinner div:nth-of-type(4) {
     transform: rotateX(90deg) translateY(-50%);
     transform-origin: top center;
-   }
-   
-   .spinner div:nth-of-type(5) {
+}
+
+.spinner div:nth-of-type(5) {
     transform: rotateX(-90deg) translateY(50%);
     transform-origin: bottom center;
-   }
-   
-   .spinner div:nth-of-type(6) {
+}
+
+.spinner div:nth-of-type(6) {
     transform: translateZ(22px);
-   }
-   
-   @keyframes spinner-y0fdc1 {
+}
+
+@keyframes spinner-y0fdc1 {
     0% {
-     transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+        transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
     }
-   
+
     50% {
-     transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+        transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
     }
-   
+
     100% {
-     transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+        transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
     }
-   }
+}

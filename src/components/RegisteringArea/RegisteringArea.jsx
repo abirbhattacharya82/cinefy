@@ -1,6 +1,7 @@
 import React from "react";
 import './RegisterArea.css';
 import axios from "axios";
+import { Outlet } from "react-router-dom";
 function RegisterArea() {
 
     function showLogin() {
@@ -33,6 +34,7 @@ function RegisterArea() {
                 document.getElementById('inp1').style.display="flex";
                 document.getElementById('inp2').style.display="flex";
                 document.getElementById('inp3').style.display="flex";
+                window.location.href = '/dashboard';
             }
         )
         .catch(err=>{
@@ -155,6 +157,7 @@ function RegisterArea() {
                     <button onClick={register} id="register">Register</button>
                 </div>
             </div>
+            <Outlet />
         </div>
     )
 };
