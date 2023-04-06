@@ -1,0 +1,139 @@
+#showLogin {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#showRegister {
+    background-color: transparent;
+}
+
+#registerForm, #loader1, #loader2 {
+    display: none;
+}
+
+#login,
+#register {
+    background-color: transparent;
+    width: 20%;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+.RegisterArea {
+    width: 90%;
+}
+
+.ButtonArea {
+    display: flex;
+    justify-content: center;
+}
+
+.RegisterArea .ButtonArea button {
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+    width: 50%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.Form {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 5%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.Form .InputArea {
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+.Form .InputArea .Label {
+    text-align: center;
+    font-size: 150%;
+    width: 30%;
+}
+
+.Form .InputArea .Input {
+    width: 70%;
+}
+
+.Form .InputArea .Input input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 90%;
+    outline: none;
+    font-size: 140%;
+    color: white;
+}
+.Loader{
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.spinner {
+    width: 44px;
+    height: 44px;
+    animation: spinner-y0fdc1 2s infinite ease;
+    transform-style: preserve-3d;
+   }
+   
+   .spinner > div {
+    background-color: rgba(255,0,0,0.5);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 2px solid white;
+   }
+   
+   .spinner div:nth-of-type(1) {
+    transform: translateZ(-22px) rotateY(180deg);
+   }
+   
+   .spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+   }
+   
+   .spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+   }
+   
+   .spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+   }
+   
+   .spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+   }
+   
+   .spinner div:nth-of-type(6) {
+    transform: translateZ(22px);
+   }
+   
+   @keyframes spinner-y0fdc1 {
+    0% {
+     transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    }
+   
+    50% {
+     transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    }
+   
+    100% {
+     transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
+   }

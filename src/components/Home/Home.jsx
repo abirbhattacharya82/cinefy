@@ -1,6 +1,7 @@
 import React from "react";
 import './Home.css';
 import logo from './logo.png';
+import RegisterArea from '../RegisteringArea/RegisteringArea'
 function Home(){
     return(
         <div className="Home">
@@ -13,7 +14,7 @@ function Home(){
                 </div>
             </div>
             <div className="Right">
-
+                <RegisterArea />
             </div>
         </div>
     )
