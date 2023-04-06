@@ -1,12 +1,33 @@
-import Background from './components/Background/Background';
-import Home from './components/Home/Home';
+import HomePage from "./components/HomePage/HomePage";
+import Dashboard from "./components/Dashboard/Dashboard";
+import { useState, useEffect } from "react";
+
 function App() {
+  const [isValidToken, setIsValidToken] = useState(false);
+  const token = localStorage.token;
+  
+  useEffect(() => {
+    async function checkTokenValidity() {
+      try {
+        const response = await fetch(`https://tiny-cyan-sockeye-shoe.cyclic.app/checkTokenValidity?token=${token}`);
+        console.log(response);
+        if (response.status === 202) {
+          setIsValidToken(true);
+        } else {
+          setIsValidToken(false);
+        }
+      } catch (error) {
+        setIsValidToken(false);
+      }
+    }
+    checkTokenValidity();
+  }, [token]);
+
   return (
-    <div className="App">
-      <Background />
-      <Home />
-    </div>
+    <>
+      {isValidToken ? <Dashboard /> : <HomePage />}
+    </>
   );
-}
+};
 
 export default App;
