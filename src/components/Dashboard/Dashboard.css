@@ -1,5 +1,5 @@
 .Navbar{
-    background-color: rgb(36, 36, 36);
+    background-color: rgb(22, 22, 22);
     display: flex;
     justify-content: left;
 }
@@ -13,14 +13,25 @@
 .Navbar #logo img{
     width: 100%;
 }
-.Navbar #wishlist{
+.Navbar #wishlist, #logout{
     background-color: transparent;
     color: white;
     border: none;
     font-size: 200%;
-    width: 15%;
     cursor: pointer;
 }
+.Navbar #wishlist{
+    width: 15%;
+}
+.Navbar #logout{
+    width: 5%;
+}
 .Navbar #wishlist:hover{
+    color: red;
+}
+.Gap{
+    width: 65%;
+}
+.Navbar #logout:hover{
     color: red;
 }
