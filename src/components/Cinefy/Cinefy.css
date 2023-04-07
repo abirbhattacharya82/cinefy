@@ -1,9 +1,10 @@
-.Cards{
+.Cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.Cards button{
+
+.Cards button {
     width: 300px;
     background-color: rgb(22, 22, 22);
     border: none;
@@ -11,24 +12,53 @@
     margin-bottom: 1.5%;
     padding-top: 1%;
 }
+
 button:hover {
-    transform: scale(1.1);
+    border: 2px solid red;
     transition: all 0.2s ease-in-out;
-  }
-  
-.Cards button .Image{
+}
+
+.Cards button .Image {
     width: 100%;
 }
-.Cards button .Image img{
+
+.Cards button .Image img {
     width: 100%;
 }
-.Cards button .Title{
+
+.Cards button .Title {
     font-size: 120%;
     color: white;
     font-weight: bold;
     padding-top: 1%;
     padding-bottom: 1%;
 }
-.Player{
-    height: 88vh;
+
+.Player {
+    display: none;
+    height: 93vh;
+}
+
+.InvisibleNav{
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: right;
+}
+
+.InvisibleNav a{
+    font-size: 300%;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.InvisibleNav button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 240%;
+    display: flex;
+    align-items: center;
 }

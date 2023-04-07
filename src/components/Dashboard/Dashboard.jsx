@@ -20,7 +20,7 @@ function Dashboard() {
     }
     return (
         <div className="Dashboard">
-            <div className="Navbar">
+            <div className="Navbar" id="navbar">
                 <button id="logo" onClick={homeDashboard}>
                     <img src={logo} alt="" />
                 </button>
