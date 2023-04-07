@@ -54,11 +54,6 @@ button:hover {
     align-items: center;
 }
 
-.InvisibleNav button{
-    border: none;
-    background-color: transparent;
-    color: white;
-    font-size: 240%;
-    display: flex;
-    align-items: center;
+.InvisibleNav a:hover{
+    color: red;
 }
