@@ -1,0 +1,26 @@
+.Navbar{
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    justify-content: left;
+}
+.Navbar #logo{
+    width: 15%;
+    padding: 1%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.Navbar #logo img{
+    width: 100%;
+}
+.Navbar #wishlist{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 200%;
+    width: 15%;
+    cursor: pointer;
+}
+.Navbar #wishlist:hover{
+    color: red;
+}
