@@ -3,16 +3,17 @@ import { Outlet } from "react-router-dom";
 import './Wishlist.css';
 import axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLeftLong as BackIcon, faClock as WatchLaterIcon } from '@fortawesome/free-solid-svg-icons';
+import { faLeftLong as BackIcon } from '@fortawesome/free-solid-svg-icons';
 
 function Wishlist() {
     const [movies, setMovies] = useState([]);
     useEffect(() => {
         const fetchMovies = async () => {
-            const url = "https://tiny-cyan-sockeye-shoe.cyclic.app/movies";
+            const token=localStorage.token;
+            const url = `https://tiny-cyan-sockeye-shoe.cyclic.app/fetchWatchlist?token=${token}`;
             axios.get(url)
                 .then(res => {
-                    setMovies(res.data.movies);
+                    setMovies(res.data.watchlist);
                 })
         };
         fetchMovies();
@@ -42,9 +43,6 @@ function Wishlist() {
                     <a href="/dashboard">
                         <FontAwesomeIcon icon={BackIcon} />
                     </a>
-                    <button>
-                        <FontAwesomeIcon icon={WatchLaterIcon} />
-                    </button>
                 </div>
                 <iframe width="100%" height="99%" src="" title="Wishlist Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" id="movie"></iframe>
             </div>

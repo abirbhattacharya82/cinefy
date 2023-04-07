@@ -65,7 +65,7 @@ function RegisterArea() {
         if (regex.test(username) && regex.test(password)) {
             const url = `https://tiny-cyan-sockeye-shoe.cyclic.app/register?username=${username}&password=${password}`;
 
-            axios.get(url)
+            axios.post(url)
                 .then(
                     (res) => {
                         localStorage.token = res.data.token;
@@ -79,6 +79,7 @@ function RegisterArea() {
                     }
                 )
                 .catch(err => {
+                    console.log("error=> "+err);
                     alert("Credentials not Unique");
                     document.getElementById('loader1').style.display = "none";
                     document.getElementById('inp4').style.display = "flex";
