@@ -1,0 +1,34 @@
+.Cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.Cards button{
+    width: 300px;
+    background-color: rgb(22, 22, 22);
+    border: none;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    padding-top: 1%;
+}
+button:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+  }
+  
+.Cards button .Image{
+    width: 100%;
+}
+.Cards button .Image img{
+    width: 100%;
+}
+.Cards button .Title{
+    font-size: 120%;
+    color: white;
+    font-weight: bold;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.Player{
+    height: 88vh;
+}
