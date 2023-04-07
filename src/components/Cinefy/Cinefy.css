@@ -39,14 +39,14 @@ button:hover {
     height: 93vh;
 }
 
-.InvisibleNav{
+.InvisibleNav {
     width: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: right;
 }
 
-.InvisibleNav a{
+.InvisibleNav a {
     font-size: 300%;
     color: white;
     text-decoration: none;
@@ -54,7 +54,7 @@ button:hover {
     align-items: center;
 }
 
-.InvisibleNav button{
+.InvisibleNav button {
     border: none;
     background-color: transparent;
     color: white;
