@@ -31,7 +31,6 @@ function RegisterArea() {
             .then(
                 (res) => {
                     localStorage.token = res.data.token;
-                    alert("Welcome to Cinefy")
                     document.getElementById('loader1').style.display = "none";
                     document.getElementById('inp1').style.display = "flex";
                     document.getElementById('inp2').style.display = "flex";
