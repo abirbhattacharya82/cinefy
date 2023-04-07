@@ -1,94 +1,102 @@
-#showLogin {
-    background-color: rgba(255, 255, 255, 0.3);
+.RegisterArea{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 }
 
-#showRegister {
+.RegisterArea .Container{
+    width: 50%;
+}
+
+.RegisterArea .Container .ButtonArea{
+    display: flex;
+    justify-content: center;
+}
+
+.RegisterArea .Container .ButtonArea button{
+    color: white;
+    font-size: 150%;
+    border: none;
+}
+
+#showLogin{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#showRegister{
     background-color: transparent;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 50%;
 }
 
-#registerForm,
-#loader1,
-#loader2 {
+#register, #login{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 20%;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+#inp6, #inp3{
+    padding-bottom: 5%;
+}
+
+.RegisterArea .Container .Form{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.RegisterArea .Container .Form .InputArea{
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.RegisterArea .Container .Form .InputArea .Label{
+    width: 30%;
+    font-size: 150%;
+    color: white;
+    margin-left: 5%;
+}
+
+.RegisterArea .Container .Form .InputArea .Input{
+    width: 60%;
+}
+
+.RegisterArea .Container .Form .InputArea .Input input{
+    width: 100%;
+    border: none;
+    color: red;
+    border-bottom: 1px solid white;
+    font-size: 140%;
+    background-color: transparent;
+    outline: none;
+}
+
+#loader1, #registerForm{
     display: none;
 }
 
-#login,
-#register {
-    background-color: transparent;
-    width: 20%;
-    border: 1px solid white;
-    border-radius: 3px;
-}
-
-.RegisterArea {
-    width: 70%;
-}
-
-.ButtonArea {
+.ButtonArea{
     display: flex;
     justify-content: center;
-    padding-top: 5%;
-}
-
-.RegisterArea .ButtonArea button {
-    border: none;
-    color: white;
-    font-weight: bold;
-    font-size: 150%;
-    text-align: center;
-    width: 50%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.Form {
-    background-color: rgba(255, 255, 255, 0.3);
-    color: white;
-    padding-top: 5%;
-    padding-bottom: 10%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.Form .InputArea {
-    display: flex;
-    justify-content: center;
-    padding-top: 1%;
-    padding-bottom: 2%;
-}
-
-.Form .InputArea .Label {
-    text-align: center;
-    font-size: 150%;
-    width: 30%;
-}
-
-.Form .InputArea .Input {
-    width: 70%;
-}
-
-.Form .InputArea .Input input {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid white;
-    width: 90%;
-    outline: none;
-    font-size: 140%;
-    color: white;
 }
 
 .Loader {
     display: flex;
     justify-content: center;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    width: 100%;
+    margin-left: 25%;
 }
 
 .spinner {
-    width: 44px;
-    height: 44px;
+    width: 70px;
+    height: 70px;
     animation: spinner-y0fdc1 2s infinite ease;
     transform-style: preserve-3d;
 }
