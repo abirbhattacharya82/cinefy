@@ -11,7 +11,7 @@ function HomePage() {
     }
   },[websiteWidth])
   return (
-    <div className="HomePage">
+    <div className="HomePage" id='p1'>
       <Background />
       {showHome? <Home /> : <Other /> }
     </div>
