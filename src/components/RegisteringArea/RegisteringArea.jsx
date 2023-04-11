@@ -61,6 +61,8 @@ function RegisterArea() {
         document.getElementById('showRegister').style.display="none";
         const username = document.getElementById('usernameR').value;
         const password = document.getElementById('passwordR').value;
+        console.log(username);
+        console.log(password);
         const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z0-9]{8,}$/;
         if (regex.test(username) && regex.test(password)) {
             const url = `https://tiny-cyan-sockeye-shoe.cyclic.app/register?username=${username}&password=${password}`;
