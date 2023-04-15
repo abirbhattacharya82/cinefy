@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import './Wishlist.css';
 import axios from "axios";
+import ReactPlayer from 'react-player/';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLeftLong as BackIcon } from '@fortawesome/free-solid-svg-icons';
 
 function Wishlist() {
     const [movies, setMovies] = useState([]);
+    const [url,setUrl] = useState("");
     useEffect(() => {
         const fetchMovies = async () => {
             const token=localStorage.token;
@@ -22,7 +24,7 @@ function Wishlist() {
         document.getElementById('cards').style.display = "none";
         document.getElementById('navbar').style.display = "none";
         document.getElementById('player').style.display = "block";
-        document.getElementById('movie').setAttribute("src", id);
+        setUrl(id);
     }
     return (
         <div className="Wishlist">
@@ -44,7 +46,7 @@ function Wishlist() {
                         <FontAwesomeIcon icon={BackIcon} />
                     </a>
                 </div>
-                <iframe width="100%" height="99%" src="" title="Wishlist Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" id="movie"></iframe>
+                <ReactPlayer url={url} width="100%" height="99%" playing="true" controls="true"/>
             </div>
             <Outlet />
         </div>
